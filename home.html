@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet prefetch'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Custom css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Home</title>
+
+    <style>
+        body {
+            padding: 0;
+        }
+
+        .box {
+            background-color: blue;
+            margin-left: -3.5%;
+        }
+
+        .logo {
+            height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-0">
+        <div class="row justify-content-md-center">
+            <div class="col-3">
+                <img class="logo mb-5 mt-2" src="/images/twitter.png" alt="twitterlogo" srcset="">
+
+                <ol class="tweet-list">
+                    <li>
+                        <div class="row mb-2">
+                            <a href=""><span style="font-weight:bold;">
+                                    <i class="octicon octicon-home" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home
+                                </span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row mb-2">
+                            <a href=""><span style="color:black; font-weight:bold;">
+                                    <i class="fa fa-hashtag" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Explore
+                                </span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row mb-2">
+                            <a href=""><span style="color:black; font-weight:bold;">
+                                    <i class="fa fa-bell" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notifications
+                                </span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row mb-2">
+                            <a href=""><span style="color:black; font-weight:bold;">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Messages
+                                </span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row mb-2">
+                            <a href=""><span style="color:black; font-weight:bold;">
+                                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bookmarks
+                                </span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row mb-2">
+                            <a href=""><span style="color:black; font-weight:bold;">
+                                    <i class="octicon octicon-book" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lists
+                                </span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row mb-2">
+                            <a href=""><span style="color:black; font-weight:bold;">
+                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profile
+                                </span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row mb-2">
+                            <a href=""><span style="color:black; font-weight:bold;">
+                                    <i class="octicon octicon-ellipsis" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More
+                                </span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <button type="button" data-toggle="modal" data-target="#exampleModal1"
+                                class="btn btn-search-bar tweet-to-btn2">Tweet</button>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tweet</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">What's happening:</label>
+                                    <textarea class="form-control" id="message-text" row="12"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="sendTweets">Tweet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Modal -
+            <!-- Start of center column -->
+            <div class="col-6">
+                <ol class="tweet-list">
+                    <li class="tweet-card">
+                        <div class="tweet-content" id="posts">
+
+                        </div>
+                    </li>
+                    <!-- <li class="tweet-card">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <span class="fullname">
+                                    <strong>Jon Vadillo</strong>
+                                </span>
+                                <span class="username">@JonVadillo</span>
+                                <span class="tweet-time">- Jul 18</span>
+                            </div>
+                            <a>
+                                <img class="tweet-card-avatar"
+                                    src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg"
+                                    alt="">
+                            </a>
+                            <div class="tweet-text">
+                                <p class="" lang="es" data-aria-label-part="0">¡Nuevo artículo en Mozilla!<br>Resuelto:
+                                    Corregido –
+                                    Una breve historia sobre un error reportado por la comunidad <a
+                                        href="https://t.co/dqg5hVQXA0" class="twitter-timeline-link"
+                                        target="_blank"><span class="">https://www.mozilla-hispano.org/</span></a> <a
+                                        href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href=""
+                                        class="twitter-hashtag"><s>#</s><b>comunidad</b></a>
+                                    <a href="" class="twitter-hashtag" dir="ltr"></a>
+                                </p>
+                            </div>
+                            <div class="tweet-footer">
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tweet-card">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <span class="fullname">
+                                    <strong>Jon Vadillo</strong>
+                                </span>
+                                <span class="username">@JonVadillo</span>
+                                <span class="tweet-time">- Jul 18</span>
+                            </div>
+                            <a>
+                                <img class="tweet-card-avatar"
+                                    src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg"
+                                    alt="">
+                            </a>
+                            <div class="tweet-text">
+                                <p class="" lang="es" data-aria-label-part="0">¡Nuevo artículo en Mozilla!<br>Resuelto:
+                                    Corregido –
+                                    Una breve historia sobre un error reportado por la comunidad <a
+                                        href="https://t.co/dqg5hVQXA0" class="twitter-timeline-link"
+                                        target="_blank"><span class="">https://www.mozilla-hispano.org/</span></a> <a
+                                        href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href=""
+                                        class="twitter-hashtag"><s>#</s><b>comunidad</b></a>
+                                    <a href="" class="twitter-hashtag" dir="ltr"></a>
+                                </p>
+                            </div>
+                            <div class="tweet-footer">
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tweet-card">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <span class="fullname">
+                                    <strong>Jon Vadillo</strong>
+                                </span>
+                                <span class="username">@JonVadillo</span>
+                                <span class="tweet-time">- Jul 18</span>
+                            </div>
+                            <a>
+                                <img class="tweet-card-avatar"
+                                    src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg"
+                                    alt="">
+                            </a>
+                            <div class="tweet-text">
+                                <p class="" lang="es" data-aria-label-part="0">¡Nuevo artículo en Mozilla!<br>Resuelto:
+                                    Corregido –
+                                    Una breve historia sobre un error reportado por la comunidad <a
+                                        href="https://t.co/dqg5hVQXA0" class="twitter-timeline-link"
+                                        target="_blank"><span class="">https://www.mozilla-hispano.org/</span></a> <a
+                                        href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href=""
+                                        class="twitter-hashtag"><s>#</s><b>comunidad</b></a>
+                                    <a href="" class="twitter-hashtag" dir="ltr"></a>
+                                </p>
+                            </div>
+                            <div class="tweet-footer">
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tweet-card">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <span class="fullname">
+                                    <strong>Jon Vadillo</strong>
+                                </span>
+                                <span class="username">@JonVadillo</span>
+                                <span class="tweet-time">- Jul 18</span>
+                            </div>
+                            <a>
+                                <img class="tweet-card-avatar"
+                                    src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg"
+                                    alt="">
+                            </a>
+                            <div class="tweet-text">
+                                <p class="" lang="es" data-aria-label-part="0">¡Nuevo artículo en Mozilla!<br>Resuelto:
+                                    Corregido –
+                                    Una breve historia sobre un error reportado por la comunidad <a
+                                        href="https://t.co/dqg5hVQXA0" class="twitter-timeline-link"
+                                        target="_blank"><span class="">https://www.mozilla-hispano.org/</span></a> <a
+                                        href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href=""
+                                        class="twitter-hashtag"><s>#</s><b>comunidad</b></a>
+                                    <a href="" class="twitter-hashtag" dir="ltr"></a>
+                                </p>
+                            </div>
+                            <div class="tweet-footer">
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                </a>
+                                <a class="tweet-footer-btn">
+                                    <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li> -->
+                </ol>
+            </div>
+            <!-- End of center column -->
+            <div class="col-3">
+                <div class="box">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+               https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

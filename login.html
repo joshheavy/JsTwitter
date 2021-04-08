@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet prefetch'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css'>
+    <!-- Custom css-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <img class="twitterLogo" src="images/twitter.png" alt="">
+        <form action="">
+            <div class="loginHome">
+                <input class="input-btn" type="email" name="Email" id="email" placeholder="Enter your Email"><br><br>
+                <input class="input-btn" type="password" name="Password" id="password" placeholder="Enter your password"><br><br>
+                <input class="btn-follow" value="Login" id="login">
+            </div>
+        </form>
+    </div>
+</body>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="js/config.js"></script>
+<script src="js/login.js"></script>
+
+</html>
